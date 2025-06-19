@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, Mail, Phone, MapPin, Github, Linkedin, Award, Briefcase, Code, User, Home, FolderOpen, Star, Calendar, Building } from 'lucide-react';
-
+import data from "../data.json"
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,27 +30,6 @@ const Portfolio = () => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
     setIsMenuOpen(false);
   };
-
-  const certifications = [
-    { name: 'Salesforce Certified AI Associate', issuer: 'Salesforce', date: 'Jun 2024', credentialId: '4636157', icon: '🤖', hasCredential: true },
-    { name: 'Salesforce Certified Sales Cloud Consultant', issuer: 'Salesforce', date: 'Jul 2023', credentialId: '3549781', icon: '☁️', hasCredential: true },
-    { name: 'COPADO Certified Fundamentals I', issuer: 'Copado', date: 'Mar 2023', credentialId: '028094', icon: '🔧', hasCredential: true },
-    { name: 'Salesforce Certified Platform Developer I', issuer: 'Salesforce', date: 'Aug 2022', credentialId: '2506994', icon: '💻', hasCredential: true },
-    { name: 'Learning Salesforce.com Development', issuer: 'LinkedIn', date: 'Mar 2022', credentialId: null, icon: '📚', hasCredential: false },
-    { name: 'Salesforce Certified Administrator (SCA)', issuer: 'Salesforce', date: 'Jan 2022', credentialId: '22905239', icon: '⚡', hasCredential: true },
-    { name: 'Salesforce Certified Platform App Builder', issuer: 'Salesforce', date: 'Jul 2021', credentialId: '22329411', icon: '🚀', hasCredential: true }
-  ];
-
-  const projects = [
-    { title: 'Enterprise CRM Automation Platform', client: 'Fortune 500 Financial Services', description: 'Built a comprehensive lead management system with automated workflows, custom objects, and advanced reporting dashboards, leading to a significant boost in sales efficiency.', tech: ['Apex', 'LWC', 'Flow', 'SOQL', 'Custom Objects'], impact: '45% increase in sales efficiency', year: '2024' },
-    { title: 'Multi-Cloud Integration Solution', client: 'Global Manufacturing Corporation', description: 'Developed a seamless integration between Salesforce, SAP, and legacy systems using REST APIs and middleware. The solution streamlined data flow across more than 15 enterprise systems.', tech: ['REST APIs', 'Integration Patterns', 'Apex', 'Middleware', 'Batch Processing'], impact: '60% reduction in data sync time', year: '2023' },
-    { title: 'Customer Self-Service Portal', client: 'Healthcare Technology Startup', description: 'Created a customer-facing portal using Experience Cloud, enabling robust self-service capabilities. This initiative successfully reduced the volume of incoming support tickets.', tech: ['Experience Cloud', 'LWC', 'Community Builder', 'Apex', 'Visualforce'], impact: '50% reduction in support tickets', year: '2023' }
-  ];
-
-  const experience = [
-    { title: 'Senior Salesforce Developer', company: 'TechCorp Solutions', period: '2023 - Present', description: 'Lead developer for enterprise-level Salesforce implementations, responsible for architecting solutions, managing complex integrations, and mentoring a team of developers.', achievements: ['Led team of 4 developers on multi-million dollar implementations', 'Architected scalable solutions for 10+ enterprise clients', 'Reduced deployment time by 40% through CI/CD pipeline implementation'] },
-    { title: 'Salesforce Developer', company: 'CloudForce Innovations', period: '2021 - 2023', description: 'Developed and maintained custom Salesforce solutions for a diverse portfolio of mid-market and enterprise clients across various industries, focusing on performance and user experience.', achievements: ['Delivered over 15 successful Salesforce projects from concept to deployment', 'Improved overall system performance by 35% through code optimization', 'Mentored 3 junior developers in Salesforce best practices'] }
-  ];
 
   // Helper component for section headers
   const SectionHeader = ({ title, gradientText, subtitle }) => (
@@ -184,10 +163,8 @@ const Portfolio = () => {
             </div>
             
             <div className="flex justify-center space-x-6">
-              <a href="#" aria-label="Github Profile" className="p-3 bg-slate-800 rounded-full hover:bg-slate-700 transition-all duration-300 hover:scale-110">
-                <Github size={24} />
-              </a>
-              <a href="#" aria-label="LinkedIn Profile" className="p-3 bg-slate-800 rounded-full hover:bg-slate-700 transition-all duration-300 hover:scale-110">
+              
+              <a href="https://www.linkedin.com/in/rashi-lambat-959129193/" aria-label="LinkedIn Profile" className="p-3 bg-slate-800 rounded-full hover:bg-slate-700 transition-all duration-300 hover:scale-110">
                 <Linkedin size={24} />
               </a>
               <a href="#" aria-label="Send Email" className="p-3 bg-slate-800 rounded-full hover:bg-slate-700 transition-all duration-300 hover:scale-110">
@@ -250,13 +227,13 @@ const Portfolio = () => {
             <SectionHeader title="Professional" gradientText="Experience" subtitle="My journey in Salesforce development across leading technology companies." />
             
             <div className="space-y-12 max-w-4xl mx-auto">
-              {experience.map((exp, index) => (
+              {data.experience.map((exp, index) => (
                 <div key={index} className="flex gap-6">
                   <div className="hidden sm:flex flex-col items-center">
                       <div className="flex-shrink-0 w-12 h-12 rounded-full bg-slate-800 border-2 border-blue-500/50 flex items-center justify-center">
                           <Briefcase className="text-blue-400" size={24} />
                       </div>
-                      {index < experience.length - 1 && <div className="w-px h-full bg-slate-700 mt-4"></div>}
+                      {index < data.experience.length - 1 && <div className="w-px h-full bg-slate-700 mt-4"></div>}
                   </div>
                   <div className="bg-slate-800/40 rounded-xl p-6 md:p-8 border border-slate-700/50 transition-all duration-300 w-full">
                     <div className="flex flex-col sm:flex-row justify-between sm:items-center mb-3">
@@ -289,7 +266,7 @@ const Portfolio = () => {
             <SectionHeader title="Featured" gradientText="Projects" subtitle="A selection of enterprise solutions that drive business transformation." />
             
             <div className="grid md:grid-cols-1 gap-10">
-              {projects.map((project, index) => (
+              {data.projects.map((project, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-xl p-6 md:p-8 border border-slate-700 hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
                   <div className="grid lg:grid-cols-3 gap-6 md:gap-8">
                     <div className="lg:col-span-2">
@@ -323,7 +300,7 @@ const Portfolio = () => {
             <SectionHeader title="Validated" gradientText="Certifications" subtitle="My professional credentials demonstrating expertise across the Salesforce ecosystem." />
             
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {certifications.map((cert, index) => (
+              {data.certifications.map((cert, index) => (
                 <div key={index} className="bg-slate-800/40 rounded-xl p-6 border border-slate-700/50 flex flex-col justify-between hover:border-blue-500/50 transition-all duration-300">
                   <div>
                     <div className="flex items-start justify-between mb-4">
@@ -356,48 +333,18 @@ const Portfolio = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <SectionHeader title="Let's" gradientText="Connect" subtitle="Ready to transform your Salesforce implementation? Reach out to discuss your project." />
             
-            <div className="grid md:grid-cols-2 gap-10 md:gap-16 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-1 gap-10 md:gap-16 max-w-5xl mx-auto">
               <div className="space-y-6">
                   <div className="flex items-center space-x-5 p-5 bg-slate-800/50 rounded-lg">
                     <Mail className="text-blue-400 flex-shrink-0" size={28} />
                     <div>
                       <h3 className="font-semibold text-lg">Email</h3>
-                      <p className="text-slate-300">developer@salesforce.com</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-5 p-5 bg-slate-800/50 rounded-lg">
-                    <Phone className="text-green-400 flex-shrink-0" size={28} />
-                    <div>
-                      <h3 className="font-semibold text-lg">Phone</h3>
-                      <p className="text-slate-300">+1 (555) 123-4567</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-5 p-5 bg-slate-800/50 rounded-lg">
-                    <MapPin className="text-red-400 flex-shrink-0" size={28} />
-                    <div>
-                      <h3 className="font-semibold text-lg">Location</h3>
-                      <p className="text-slate-300">San Francisco, CA</p>
+                      <p className="text-slate-300">rashilambat22@gmail.com</p>
                     </div>
                   </div>
               </div>
               
-              <form className="space-y-5" onSubmit={(e) => { e.preventDefault(); alert('Form submitted! (Demo)'); }}>
-                <div>
-                  <label htmlFor="name" className="sr-only">Your Name</label>
-                  <input id="name" type="text" placeholder="Your Name" required className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none transition-colors" />
-                </div>
-                <div>
-                  <label htmlFor="email" className="sr-only">Your Email</label>
-                  <input id="email" type="email" placeholder="Your Email" required className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none transition-colors" />
-                </div>
-                <div>
-                  <label htmlFor="message" className="sr-only">Your Message</label>
-                  <textarea id="message" rows="5" placeholder="Your Message" required className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none transition-colors resize-none"></textarea>
-                </div>
-                <button type="submit" className="w-full px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 font-semibold text-lg">
-                  Send Message
-                </button>
-              </form>
+              
             </div>
           </div>
         </section>
@@ -408,14 +355,10 @@ const Portfolio = () => {
       <footer className="py-8 border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-slate-400 text-sm">
-              © {new Date().getFullYear()} Salesforce Developer Portfolio. All Rights Reserved.
-            </div>
+            
             <div className="flex space-x-6">
-              <a href="#" aria-label="Github Profile" className="text-slate-400 hover:text-white transition-colors">
-                <Github size={20} />
-              </a>
-              <a href="#" aria-label="LinkedIn Profile" className="text-slate-400 hover:text-white transition-colors">
+              
+              <a href="https://www.linkedin.com/in/rashi-lambat-959129193/" aria-label="LinkedIn Profile" className="text-slate-400 hover:text-white transition-colors">
                 <Linkedin size={20} />
               </a>
               <a href="#" aria-label="Send Email" className="text-slate-400 hover:text-white transition-colors">

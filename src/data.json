@@ -1,0 +1,124 @@
+{
+  "certifications": [
+    {
+      "name": "Salesforce Certified AI Associate",
+      "issuer": "Salesforce",
+      "date": "2024",
+      "credentialId": null,
+      "icon": "\ud83e\udd16",
+      "hasCredential": true
+    },
+    {
+      "name": "Salesforce Sales Cloud Consultant",
+      "issuer": "Salesforce",
+      "date": "2023",
+      "credentialId": null,
+      "icon": "\u2601\ufe0f",
+      "hasCredential": true
+    },
+    {
+      "name": "Salesforce Certified Platform Developer I",
+      "issuer": "Salesforce",
+      "date": "2022",
+      "credentialId": null,
+      "icon": "\ud83d\udcbb",
+      "hasCredential": true
+    },
+    {
+      "name": "Salesforce Certified Administrator",
+      "issuer": "Salesforce",
+      "date": "2022",
+      "credentialId": null,
+      "icon": "\u2699\ufe0f",
+      "hasCredential": true
+    },
+    {
+      "name": "Salesforce Certified Platform App Builder",
+      "issuer": "Salesforce",
+      "date": "2021",
+      "credentialId": null,
+      "icon": "\ud83d\ude80",
+      "hasCredential": true
+    }
+  ],
+  "projects": [
+    {
+      "title": "Salesforce CPQ Implementation",
+      "client": "Caterpillar (via Infosys)",
+      "description": "Implemented Salesforce CPQ including pricing rules, product bundles, and quote templates to automate quote generation and reduce manual effort.",
+      "tech": [
+        "Salesforce CPQ",
+        "Flows",
+        "Apex",
+        "Validation Rules",
+        "Product Bundles"
+      ],
+      "impact": "Reduced manual quoting effort by 25%",
+      "year": "2024"
+    },
+    {
+      "title": "Customer & Partner Experience Sites",
+      "client": "Caterpillar (via Infosys)",
+      "description": "Developed Experience Cloud sites to improve external user collaboration and self-service access, enhancing usability and branding.",
+      "tech": [
+        "Experience Cloud",
+        "LWC",
+        "Community Builder",
+        "Apex"
+      ],
+      "impact": "Enhanced collaboration and reduced support dependencies",
+      "year": "2024"
+    },
+    {
+      "title": "Automated Deployment with Azure DevOps",
+      "client": "Caterpillar (via Infosys)",
+      "description": "Set up end-to-end CI/CD using Azure DevOps for Salesforce, streamlining sandbox-to-production deployments.",
+      "tech": [
+        "Azure DevOps",
+        "CI/CD",
+        "Copado",
+        "Version Control"
+      ],
+      "impact": "Reduced deployment errors by 40% and improved release velocity",
+      "year": "2024"
+    },
+    {
+      "title": "Salesforce Automation & Optimization",
+      "client": "Siemens Energy (via Accenture)",
+      "description": "Automated business processes with Flows and Apex, improving operational efficiency and reducing manual input.",
+      "tech": [
+        "Apex",
+        "Flows",
+        "Validation Rules",
+        "SOQL",
+        "Copado"
+      ],
+      "impact": "Reduced manual tasks and improved data accuracy",
+      "year": "2023"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Associate Consultant | Salesforce Developer",
+      "company": "Infosys",
+      "period": "May 2024 \u2013 Present",
+      "description": "Leading development and deployment of Salesforce solutions for enterprise clients in the heavy machinery sector.",
+      "achievements": [
+        "Built scalable Salesforce applications with 90%+ test coverage",
+        "Implemented Salesforce CPQ and Experience Sites",
+        "Managed CI/CD pipelines using Azure DevOps"
+      ]
+    },
+    {
+      "title": "Packaged App Development Analyst | Salesforce Developer",
+      "company": "Accenture",
+      "period": "July 2021 \u2013 April 2024",
+      "description": "Delivered custom Salesforce implementations for energy sector clients, focusing on automation and performance improvements.",
+      "achievements": [
+        "Reduced deployment failures by 90% through Copado automation",
+        "Automated business processes using Flows and Apex",
+        "Led deployment and back-promotion efforts across environments"
+      ]
+    }
+  ]
+}
