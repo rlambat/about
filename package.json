@@ -2,7 +2,7 @@
   "name": "myapp",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://ragsav.github.io/portfolio",
+  "homepage": "https://rlambat.github.io/about",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -12,7 +12,9 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
+
   "dependencies": {
+
     "@tailwindcss/vite": "^4.1.10",
     "lucide-react": "^0.518.0",
     "react": "^19.1.0",

@@ -144,7 +144,7 @@ const Portfolio = () => {
             </h1>
             
             <p className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-              Crafting powerful enterprise solutions with 7 certifications and a passion for complex Salesforce implementations.
+              Crafting powerful enterprise solutions with 5 certifications and a passion for complex Salesforce implementations.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
