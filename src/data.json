@@ -5,39 +5,39 @@
       "issuer": "Salesforce",
       "date": "2024",
       "credentialId": null,
-      "icon": "\ud83e\udd16",
+      "icon": "🤖",
       "hasCredential": true
     },
     {
       "name": "Salesforce Sales Cloud Consultant",
       "issuer": "Salesforce",
-      "date": "2023",
+      "date": "2024",
       "credentialId": null,
-      "icon": "\u2601\ufe0f",
+      "icon": "☁️",
       "hasCredential": true
     },
     {
       "name": "Salesforce Certified Platform Developer I",
       "issuer": "Salesforce",
-      "date": "2022",
+      "date": "2023",
       "credentialId": null,
-      "icon": "\ud83d\udcbb",
+      "icon": "💻",
       "hasCredential": true
     },
     {
       "name": "Salesforce Certified Administrator",
       "issuer": "Salesforce",
-      "date": "2022",
+      "date": "2023",
       "credentialId": null,
-      "icon": "\u2699\ufe0f",
+      "icon": "⚙️",
       "hasCredential": true
     },
     {
       "name": "Salesforce Certified Platform App Builder",
       "issuer": "Salesforce",
-      "date": "2021",
+      "date": "2022",
       "credentialId": null,
-      "icon": "\ud83d\ude80",
+      "icon": "🚀",
       "hasCredential": true
     }
   ],
@@ -45,13 +45,13 @@
     {
       "title": "Salesforce CPQ Implementation",
       "client": "Caterpillar (via Infosys)",
-      "description": "Implemented Salesforce CPQ including pricing rules, product bundles, and quote templates to automate quote generation and reduce manual effort.",
+      "description": "Implemented Salesforce CPQ for quote generation, pricing rules, and product configuration, reducing manual effort by 25%.",
       "tech": [
         "Salesforce CPQ",
-        "Flows",
         "Apex",
-        "Validation Rules",
-        "Product Bundles"
+        "Flows",
+        "Product Bundles",
+        "Validation Rules"
       ],
       "impact": "Reduced manual quoting effort by 25%",
       "year": "2024"
@@ -59,33 +59,46 @@
     {
       "title": "Customer & Partner Experience Sites",
       "client": "Caterpillar (via Infosys)",
-      "description": "Developed Experience Cloud sites to improve external user collaboration and self-service access, enhancing usability and branding.",
+      "description": "Developed Experience Cloud Sites for customer and partner portals using LWC, Flows, and Apex.",
       "tech": [
         "Experience Cloud",
         "LWC",
-        "Community Builder",
-        "Apex"
+        "Apex",
+        "Screen Flows"
       ],
-      "impact": "Enhanced collaboration and reduced support dependencies",
+      "impact": "Enhanced collaboration and improved UI for external users",
       "year": "2024"
     },
     {
-      "title": "Automated Deployment with Azure DevOps",
+      "title": "Automated CI/CD with Azure DevOps",
       "client": "Caterpillar (via Infosys)",
-      "description": "Set up end-to-end CI/CD using Azure DevOps for Salesforce, streamlining sandbox-to-production deployments.",
+      "description": "Managed end-to-end deployments using Azure DevOps, syncing environments and automating releases.",
       "tech": [
         "Azure DevOps",
         "CI/CD",
         "Copado",
         "Version Control"
       ],
-      "impact": "Reduced deployment errors by 40% and improved release velocity",
+      "impact": "Reduced deployment errors and improved release velocity",
       "year": "2024"
+    },
+    {
+      "title": "Warranty Claims and Extended Warranty Automation",
+      "client": "FG Wilson (via Infosys)",
+      "description": "Redesigned warranty claim processes using Flows, LWC, and Visualforce. Automated service contract creation.",
+      "tech": [
+        "LWC",
+        "Visualforce",
+        "Flows",
+        "Apex"
+      ],
+      "impact": "Reduced contract creation time and improved warranty data accuracy",
+      "year": "2025"
     },
     {
       "title": "Salesforce Automation & Optimization",
       "client": "Siemens Energy (via Accenture)",
-      "description": "Automated business processes with Flows and Apex, improving operational efficiency and reducing manual input.",
+      "description": "Built and deployed Salesforce customizations, automated business processes with Apex and Flows.",
       "tech": [
         "Apex",
         "Flows",
@@ -93,7 +106,7 @@
         "SOQL",
         "Copado"
       ],
-      "impact": "Reduced manual tasks and improved data accuracy",
+      "impact": "Improved operational efficiency and reduced manual effort",
       "year": "2023"
     }
   ],
@@ -101,23 +114,23 @@
     {
       "title": "Associate Consultant | Salesforce Developer",
       "company": "Infosys",
-      "period": "May 2024 \u2013 Present",
-      "description": "Leading development and deployment of Salesforce solutions for enterprise clients in the heavy machinery sector.",
+      "period": "May 2024 – Present",
+      "description": "Leading Salesforce implementations for enterprise clients in manufacturing and machinery sector.",
       "achievements": [
-        "Built scalable Salesforce applications with 90%+ test coverage",
-        "Implemented Salesforce CPQ and Experience Sites",
+        "Achieved 90%+ Apex test coverage",
+        "Built CPQ pricing rules and automated Experience Site flows",
         "Managed CI/CD pipelines using Azure DevOps"
       ]
     },
     {
       "title": "Packaged App Development Analyst | Salesforce Developer",
       "company": "Accenture",
-      "period": "July 2021 \u2013 April 2024",
-      "description": "Delivered custom Salesforce implementations for energy sector clients, focusing on automation and performance improvements.",
+      "period": "July 2021 – April 2024",
+      "description": "Delivered Salesforce solutions for energy sector, focusing on automation, deployment, and data accuracy.",
       "achievements": [
-        "Reduced deployment failures by 90% through Copado automation",
-        "Automated business processes using Flows and Apex",
-        "Led deployment and back-promotion efforts across environments"
+        "Reduced deployment failures by 90% using Copado",
+        "Automated core business processes with Apex and Flows",
+        "Led back-promotion and versioning efforts across environments"
       ]
     }
   ]
